@@ -181,7 +181,7 @@ function UserDashboard() {
         {messages.length > 0 ? (
           messages.map((message, index) => (
             <MessageCard
-              key = {message._id}
+              key = {message._id ? String(message._id) : index}
               message={message}
               onMessageDelete={handleDeleteMessage}
             />
